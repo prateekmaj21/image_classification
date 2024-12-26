@@ -24,3 +24,37 @@
    ```bash
    uvicorn app.main:app --reload
    ```
+
+# Image Classification API
+
+## Routes
+
+### 1. `/` - Welcome Route
+
+**Method:** `GET`
+
+**Description:**  
+Returns a welcome message.
+
+**Response Example:**
+
+```json
+{
+  "message": "Welcome to the Image Classification API"
+}
+```
+
+### 2. `/predict/` - Image Classification
+
+**Method:** `POST`
+
+**Description:**  
+Accepts an image file and returns the predicted class label along with its probability.
+
+**Request Body:**
+
+```json
+{
+  "file": "image_file"
+}
+```
